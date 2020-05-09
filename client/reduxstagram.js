@@ -5,5 +5,9 @@ import {render} from 'react-dom' //importamos render
 // importamos css
 import css from './styles/style.styl'
 
+// Import components
+import Main from './components/Main';
+
 // Creamos el render de la app y lo inyectamos en root (index.html)
-render(<p>Hola</p>, document.getElementById('root'));
+// Renderizamos Main
+render(<Main/>, document.getElementById('root'));
