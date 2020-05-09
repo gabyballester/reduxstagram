@@ -7,8 +7,8 @@ import { browserHistory } from 'react-reouter';
 import rootReducer from './reducers/index';
 
 // importamos datos por defecto para mostrar
-import comments from './data/comments'
-import posts from './data/posts';
+import comments from '../data/comments'
+import posts from '../data/posts';
 
 // creamos un estado por defecto con estos datos
 const defaultState = {

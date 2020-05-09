@@ -17,7 +17,6 @@ export function addComment(postId, author, comment) { // pasamos el post, el aut
     }
 }
 
-
 //método para borrar comentario
 export function removeComment(postId, i) { // paamos el postId y el comentario
     return {
