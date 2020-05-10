@@ -32,7 +32,8 @@ const Photo = React.createClass({
                     <div className="control-buttons">
 
                         {/* botón like */}
-                        <button className="likes">&hearts; {post.likes}</button>
+                        <button onClick={this.props.increment.bind(null, i)}
+                        className="likes">&hearts; {post.likes}</button>
                         {/* fin botón like */}
 
                         {/* botón comments */}
