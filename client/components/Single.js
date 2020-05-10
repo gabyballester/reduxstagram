@@ -4,16 +4,21 @@ import Comments from './Comments';
 
 const Single = React.createClass({
     render() {
+        const { posts, comments, params } = this.props;
+        const { postId } = params;
         // indice de post que coincida con el param enviado
-        const i = this.props.posts.findIndex(
-            (post) => post.code === this.props.params.postId);
+        const i = posts.findIndex(
+            (post) => post.code === postId);
         // recuperamos el post que corresponda a ese i
-        const post = this.props.posts[i];
+        const post = posts[i]; // sacar sólo ese post
+        // recuperamos todos los comentarios
+        const postComments = comments[postId] || [];
+
         return (
             <div className="single-photo">
                 {/* pasamos i post y el resto de props con spread */}
                 <Photo i={i} post={post} {...this.props} />
-                <Comments />
+                <Comments postComments={postComments} {...this.props}/>
             </div>
         );
     },
