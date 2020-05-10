@@ -7,7 +7,8 @@ export function increment(index) { // le pasamos el identificador del post
 }
 
 // método agregar comentarios
-export function addComment(postId, author, comment) { // pasamos el post, el autor y el comentario
+// pasamos el post, el autor y el comentario
+export function addComment(postId, author, comment) {
     return {
         type: 'ADD_COMMENT', //indica la acción a ejecutar
         // devolvemos los mismos datos que pasamos por parámetro

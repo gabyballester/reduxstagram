@@ -3,14 +3,15 @@ import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
 // importamos los reducers a combinar
-import postsReducer from './reducers/posts';
-import commentsReducer from './reducers/comments';
+import postsReducer from './postsReducer';
+import commentsReducer from './commentsReducer';
 
 // combinamos
 const rootReducer = combineReducers({
-    postsReducer,
-    commentsReducer,
-    router: routerReducer
+    // Los campos tienen que llamarse igual que los del store por defecto
+    posts: postsReducer,
+    comments: commentsReducer,
+    routing: routerReducer
 });
 
 export default rootReducer; // exportamos

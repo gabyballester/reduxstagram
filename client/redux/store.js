@@ -1,20 +1,20 @@
 //importaciones de redux
-import { createStore, compose } from 'redux'
+import { createStore, compose } from 'redux';
 import { syncHistoryWithStore } from 'react-router-redux';
-import { browserHistory } from 'react-reouter';
+import { browserHistory } from 'react-router';
 
 // importamos al root reducer
 import rootReducer from './reducers/indexReducer';
 
 // importamos datos por defecto para mostrar
-import comments from '../data/comments'
 import posts from '../data/posts';
+import comments from '../data/comments';
 
 // creamos un estado por defecto con estos datos
 const defaultState = {
     // podemos darles un nombre distinto
     posts: posts,
-    commments: comments
+    comments: comments
 }
 
 // creamos la constante store
