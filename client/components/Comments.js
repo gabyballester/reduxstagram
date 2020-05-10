@@ -1,4 +1,4 @@
-import React from "react"; // imr snippet
+import React from 'react';
 
 const Comments = React.createClass({
     renderComment(comment, i) {
@@ -6,7 +6,10 @@ const Comments = React.createClass({
             <div className="comment" key={i}>
                 <p>
                     <strong> {comment.user} </strong> {comment.text}
-                    <button className="remove-comment">
+                    <button
+                        onClick={this.props.removeComment.bind(
+                            null, this.props.params.postId, i)}
+                        className="remove-comment">
                         &times;
                     </button>
                 </p>
@@ -18,7 +21,8 @@ const Comments = React.createClass({
         const { postId } = this.props.params; //recuperamos el postId de props
         const author = this.refs.author.value; // esto recupera el input
         const comment = this.refs.comment.value; // esto recupera el input
-        console.log(postId, author, comment);
+        this.props.addComment(postId, author, comment);
+        this.refs.commentForm.reset();
     },
     render() {
         const { postComments } = this.props;
