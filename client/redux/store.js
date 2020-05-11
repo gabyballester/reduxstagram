@@ -17,8 +17,13 @@ const defaultState = {
     comments: comments
 }
 
+// para usar las Redux dev tools
+const enhancers = compose(
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+);
+
 // creamos la constante store
-const store = createStore(rootReducer, defaultState);
+const store = createStore(rootReducer, defaultState, enhancers);
 
 // exportamos constante history para controlar el navegador
 export const history = syncHistoryWithStore(browserHistory, store);
