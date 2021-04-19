@@ -1,13 +1,40 @@
-# Learn Redux
+## Proyecto Reduxstagram
 
-A simple React + Redux implementation. This will be turned into a free video series once the app is totally fleshed out.
+Publicaciones con foto estilo Instagram
 
-## Running
+#### Tecnología usada:
+```
+React + Redux + webpack
+```
+#### Instalar dependencias:
+```
+yarn install
+```
 
-First `npm install` to grab all the necessary dependencies. 
+#### Arranque
+Ejecuta `yarn start` y abre <localhost:7770> en el navegador
+#### Capturas
+- Viualizando el listado de publicaciones
 
-Then run `npm start` and open <localhost:7770> in your browser.
+#####
+![Todo list 1](Screenshot_1.jpg)
 
-## Production Build
+- Viualizando una publicación
+#####
+![Todo list 1](Screenshot_2.jpg)
 
-Run `npm build` to create a distro folder and a bundle.js file.
+- Agregando comentario
+#####
+![Todo list 1](Screenshot_3.jpg)
+
+- Comentario agregado
+#####
+![Todo list 1](Screenshot_4.jpg)
+
+- Dar like y visualizar número de comentarios
+#####
+![Todo list 1](Screenshot_5.jpg)
+
+- Vuelta al listado de publicaciones con la información actualizada
+#####
+![Todo list 1](Screenshot_6.jpg)
